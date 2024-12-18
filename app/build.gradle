@@ -1,0 +1,108 @@
+plugins {
+    alias(libs.plugins.androidApplication)
+}
+
+android {
+    namespace 'com.proove.smart'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.proove.smart"
+        minSdk 24
+        targetSdk 34
+        versionCode 1016
+        versionName "0.1.6"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+    }
+    signingConfigs {
+        debug {
+            storeFile file('..\\sign\\AppSign.jks')
+            storePassword 'yscoco'
+            keyPassword 'yscoco'
+            keyAlias 'ys'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        release {
+            storeFile file('..\\sign\\AppSign.jks')
+            storePassword 'yscoco'
+            keyPassword 'yscoco'
+            keyAlias 'ys'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    bundle {
+        language {
+            enableSplit = false
+        }
+        density {
+            enableSplit = true
+        }
+        abi {
+            enableSplit = true
+        }
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+        buildConfig true
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    implementation fileTree(include: ['*.aar'], dir: 'libs')
+    implementation project(path: ':lib-ble-bean')
+    implementation 'com.google.code.gson:gson:2.10.1'
+    // ShapeView：https://github.com/getActivity/ShapeView
+    implementation 'com.github.getActivity:ShapeView:9.2'
+    // ShapeDrawable：https://github.com/getActivity/ShapeDrawable
+    implementation 'com.github.getActivity:ShapeDrawable:3.2'
+
+    def room_version = "2.5.2"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    def android_picker_version = "4.1.11"
+    implementation "com.github.gzu-liyujiang.AndroidPicker:Common:$android_picker_version"
+    implementation "com.github.gzu-liyujiang.AndroidPicker:WheelView:$android_picker_version"
+    implementation "com.github.gzu-liyujiang.AndroidPicker:WheelPicker:$android_picker_version"
+    implementation "com.github.gzu-liyujiang.AndroidPicker:AddressPicker:$android_picker_version"
+    implementation 'com.github.getActivity:XXPermissions:18.6'
+
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    implementation "androidx.work:work-runtime:2.8.1"
+    // 谷歌地图
+    implementation 'com.google.android.gms:play-services-maps:18.2.0'
+    implementation 'com.google.android.gms:play-services-location:21.3.0'
+}

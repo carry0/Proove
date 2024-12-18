@@ -1,0 +1,163 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Proove" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/bg_home_color</item>
+        <item name="colorPrimaryDark">@color/bg_home_color</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+
+    </style>
+
+    <!-- 特定的TextView样式 -->
+    <style name="CustomTextViewStyle">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="IcBack">
+        <item name="android:src">@drawable/ic_back_night</item>
+    </style>
+    <style name="IcCustomNameChange">
+        <item name="android:src">@drawable/ic_custom_name_change_night</item>
+    </style>
+    <style name="IcCustomSelect">
+        <item name="android:src">@drawable/ic_custom_select_night</item>
+    </style>
+    <style name="IcEmail">
+        <item name="android:src">@drawable/ic_email_night</item>
+    </style>
+
+    <style name="IcPhone">
+        <item name="android:src">@drawable/ic_phone_night</item>
+    </style>
+
+    <style name="IcAddress">
+        <item name="android:src">@drawable/ic_address_night</item>
+    </style>
+
+    <style name="IcArrows">
+        <item name="android:src">@drawable/ic_arrows_night</item>
+    </style>
+
+    <style name="IcAnc">
+        <item name="android:src">@drawable/selector_anc_night</item>
+    </style>
+
+    <style name="IcTransparency">
+        <item name="android:src">@drawable/selector_turn_off_night</item>
+    </style>
+    <style name="IcTurnOff">
+        <item name="android:src">@drawable/selector_transparency_night</item>
+    </style>
+    <style name="Ic3DMode">
+        <item name="android:src">@drawable/selector_3d_mode_night</item>
+    </style>
+
+    <style name="IcDeviceSearch">
+        <item name="android:src">@drawable/selector_device_search_night</item>
+    </style>
+
+    <style name="IcGameMode">
+        <item name="android:src">@drawable/selector_game_mode_night</item>
+    </style>
+    <style name="IcNav">
+        <item name="android:src">@drawable/selector_nav_night</item>
+    </style>
+    <style name="IcBle">
+        <item name="android:src">@drawable/ic_scan_ble_night</item>
+    </style>
+    <style name="IcNavigation">
+        <item name="android:src">@drawable/ic_navigation_night</item>
+    </style>
+    <style name="IcPlayStop">
+        <item name="android:src">@drawable/selector_play_stop_night</item>
+    </style>
+    <style name="IcBleState">
+        <item name="android:src">@drawable/selector_ble_state_night</item>
+    </style>
+    <style name="IcStart">
+        <item name="android:src">@drawable/selector_start_moving_night</item>
+    </style>
+    <style name="IcFactorySettings">
+        <item name="android:src">@drawable/ic_factory_settings_night</item>
+    </style>
+
+    <style name="IcEqSettings">
+        <item name="android:src">@drawable/ic_eq_setting_night</item>
+    </style>
+
+    <style name="IcKeySettings">
+        <item name="android:src">@drawable/ic_key_setting_night</item>
+    </style>
+    <style name="IcTimer">
+        <item name="android:src">@drawable/ic_timer_night</item>
+    </style>
+    <style name="IcSetting">
+        <item name="android:background">@drawable/ic_setting_night</item>
+    </style>
+    <style name="IcChange">
+        <item name="android:src">@drawable/ic_change_night</item>
+    </style>
+    <style name="IcBattery">
+        <item name="android:src">@drawable/ic_battery_night</item>
+    </style>
+    <style name="IcChangeName">
+        <item name="android:src">@drawable/ic_change_name_night</item>
+    </style>
+
+    <style name="IcOtaUpdate">
+        <item name="android:src">@drawable/ic_ota_update_night</item>
+    </style>
+    <style name="IcClose">
+        <item name="android:src">@drawable/ic_dialog_close_night</item>
+    </style>
+    <style name="IcAdd">
+        <item name="android:src">@drawable/ic_add_night</item>
+    </style>
+    <style name="IcSoundOn">
+        <item name="android:src">@drawable/ic_sound_on_night</item>
+    </style>
+    <style name="IcMoreSettings">
+        <item name="android:src">@drawable/ic_more_setting_night</item>
+    </style>
+    <style name="IcDialogClose">
+        <item name="android:src">@drawable/ic_dialog_close_night</item>
+    </style>
+    <color name="bg_tv_ear_color">#F4F4F4</color>
+    <color name="dialog_ota_update_tv_color">#FFFFFF</color>
+    <color name="v_scan_line_s">#3D3D3D</color>
+    <color name="v_scan_line_c">#80292929</color>
+    <color name="tv_hint_color">#FFFFFF</color>
+    <color name="but_ota_update_bg_color">#144B7B</color>
+    <color name="but_battery_status_color">#144B7B</color>
+    <color name="but_ota_update_tv_color">#FFFFFF</color>
+    <color name="dialog_but_ota_update_tv_color">#FFFFFF</color>
+    <color name="dialog_but_ota_cancel_tv_color">#FFFFFF</color>
+    <color name="dialog_but_ota_update_bg_color">#144B7B</color>
+    <color name="tv_send">#8E8E8E</color>
+    <color name="pro_bg_color">#2C8ADD</color>
+    <color name="dialog_but_ota_cancel_bg_color">#89231A</color>
+    <color name="thumb_color">#FFFFFFFF</color>
+    <color name="bg_eq_function">#292929</color>
+    <color name="cl_bg_electric_color">#144B7B</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#3D3D3D</color>
+    <color name="dialog_white">#292929</color>
+    <color name="tv_color">#FFFFFF</color>
+    <color name="tv_home_title_color">#8E8E8E</color>
+    <color name="bg_home_color">#292929</color>
+    <color name="v_line_color">#80DEDEDE</color>
+    <color name="bg_state_stop">#F2BFBA</color>
+    <color name="bg_state_nav">#292929</color>
+    <color name="eq_adjust_bg">#DCECF9</color>
+    <color name="bg_electric_color">#144B7B</color>
+    <color name="electric_color">#2C8ADD</color>
+    <color name="progress_bar_color_1">#84DD63</color>
+    <color name="progress_bar_color_2">#DB4C40</color>
+    <color name="bg_progress_bar_color">#CAF1BC</color>
+    <color name="bg_eq_progress_color">#3D3D3D</color>
+    <color name="tv_ota_version_color">#62A8E5</color>
+
+    <color name="sw_bg_color">#292929</color>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/bg_eq_function_24dp" android:state_selected="true" />
+    <item android:drawable="@drawable/bg_eq_24dp_line_1dp" android:state_selected="false" />
+</selector>

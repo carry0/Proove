@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background" android:height="8.38dp" android:gravity="center">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/eq_adjust_bg" />
+            <corners android:radius="100dp"/>
+        </shape>
+    </item>
+    <item android:id="@android:id/progress" android:height="9.05dp"  android:gravity="center">
+        <scale android:scaleWidth="100%">
+            <shape>
+                <solid android:color="@color/bg_electric_color" />
+                <corners android:radius="100dp"/>
+            </shape>
+        </scale>
+    </item>
+</layer-list>

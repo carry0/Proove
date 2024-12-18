@@ -1,0 +1,133 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "27ee9b13ef99e99cb7ced33bc0c72582",
+    "entities": [
+      {
+        "tableName": "device_info",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`mac` TEXT NOT NULL, `ble_mac` TEXT, `product_id` INTEGER NOT NULL, `device_name` TEXT, `location` TEXT, `longitude` TEXT, `latitude` TEXT, `last_record_time` INTEGER NOT NULL, `latest_connect_time` INTEGER NOT NULL, PRIMARY KEY(`mac`))",
+        "fields": [
+          {
+            "fieldPath": "mac",
+            "columnName": "mac",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bleMac",
+            "columnName": "ble_mac",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "productId",
+            "columnName": "product_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deviceName",
+            "columnName": "device_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "location",
+            "columnName": "location",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "longitude",
+            "columnName": "longitude",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "latitude",
+            "columnName": "latitude",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastRecordTime",
+            "columnName": "last_record_time",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "latestConnectTime",
+            "columnName": "latest_connect_time",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "mac"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "eq_info",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`device_tag` TEXT NOT NULL, `name` TEXT NOT NULL, `is_custom` INTEGER NOT NULL, `custom_index` INTEGER NOT NULL, `freq` TEXT, `gain` TEXT, PRIMARY KEY(`device_tag`, `custom_index`))",
+        "fields": [
+          {
+            "fieldPath": "deviceTag",
+            "columnName": "device_tag",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isCustom",
+            "columnName": "is_custom",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "customIndex",
+            "columnName": "custom_index",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "freq",
+            "columnName": "freq",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "gain",
+            "columnName": "gain",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "device_tag",
+            "custom_index"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '27ee9b13ef99e99cb7ced33bc0c72582')"
+    ]
+  }
+}

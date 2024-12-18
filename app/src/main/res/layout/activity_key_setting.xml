@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.proove.smart.vm.DeviceKeySettingViewModel" />
+        <import type="com.proove.ble.constant.protocol.DeviceSide"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_home_color">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingBottom="8dp"
+            android:id="@+id/cl_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/key_settings"
+                android:textColor="@color/tv_color"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:onClick="@{(v)->viewModel.finishActivity(v)}"
+                style="@style/IcBack"
+                android:id="@+id/iv_setting"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_title_bar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout4"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_white_100dp"
+                    android:paddingHorizontal="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_left"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="8dp"
+                        android:background="@drawable/selector_nav_bg"
+                        android:gravity="center"
+                        android:textColor="@color/select_tv_eq"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_right"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="@string/left" />
+
+
+                    <TextView
+                        android:id="@+id/tv_right"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="8dp"
+                        android:background="@drawable/selector_nav_bg"
+                        android:gravity="center"
+                        android:textColor="@color/select_tv_eq"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_left"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="@string/right" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+                    <ImageView
+                        android:id="@+id/iv_ear_l"
+                        android:layout_width="60dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="32dp"
+                        android:src="@drawable/ic_device_l"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_ear_r_magnify"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_ear_l_magnify"
+                        android:layout_width="85dp"
+                        android:layout_height="127dp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="32dp"
+                        android:src="@drawable/ic_device_l"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_ear_r"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_ear_r"
+                        android:layout_width="60dp"
+                        android:layout_height="0dp"
+                        android:layout_marginVertical="32dp"
+                        android:src="@drawable/ic_device_r"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/iv_ear_l_magnify"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_ear_r_magnify"
+                        android:layout_width="85dp"
+                        android:layout_height="127dp"
+                        android:layout_marginVertical="32dp"
+                        android:src="@drawable/ic_device_r"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/iv_ear_l"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/constraintLayout7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_item_device_24dp"
+                    android:paddingVertical="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintLayout5"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:onClick="@{()->viewModel.showDialog(0)}"
+                        android:id="@+id/cl_one_touch"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingHorizontal="24dp"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/textView17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/tv_home_title_color"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:text="@string/one_touch" />
+
+                        <TextView
+                            android:id="@+id/tv_one"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:gravity="end"
+                            android:textColor="@color/tv_color"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView17"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tool:text="@string/play_stop" />
+
+                        <ImageView
+                            android:layout_width="6dp"
+                            android:layout_height="11dp"
+                            style="@style/IcArrows"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:onClick="@{()->viewModel.showDialog(1)}"
+                        android:id="@+id/cl_tow_touch"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingHorizontal="24dp"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_one_touch">
+
+                        <TextView
+                            android:id="@+id/textView16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/tv_home_title_color"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:text="@string/two_touches" />
+
+                        <TextView
+                            android:id="@+id/tv_tow"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:gravity="end"
+                            android:textColor="@color/tv_color"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView16"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tool:text="@string/previous_song" />
+
+                        <ImageView
+                            android:layout_width="6dp"
+                            android:layout_height="11dp"
+                            style="@style/IcArrows"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:onClick="@{()->viewModel.showDialog(2)}"
+                        android:id="@+id/cl_Three_touch"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingHorizontal="24dp"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_tow_touch">
+
+                        <TextView
+                            android:id="@+id/textView15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/tv_home_title_color"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:text="@string/three_touches" />
+
+                        <TextView
+                            android:id="@+id/tv_three"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:gravity="end"
+                            android:textColor="@color/tv_color"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView15"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tool:text="@string/next_song" />
+
+                        <ImageView
+                            android:layout_width="6dp"
+                            android:layout_height="11dp"
+                            style="@style/IcArrows"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:onClick="@{()->viewModel.showDialog(3)}"
+                        android:id="@+id/cl_long_touch"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingHorizontal="24dp"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_Three_touch">
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/tv_home_title_color"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:text="@string/press_and_hold" />
+
+                        <TextView
+                            android:id="@+id/tv_long"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:gravity="end"
+                            android:textColor="@color/tv_color"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView14"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView9"
+                            android:layout_width="6dp"
+                            android:layout_height="11dp"
+                            style="@style/IcArrows"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

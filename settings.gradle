@@ -1,0 +1,62 @@
+pluginManagement {
+    repositories {
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+
+        maven {
+            url 'https://maven.aliyun.com/repository/public'
+            //Gradle7.0 以前版本不用设置
+            allowInsecureProtocol(true)
+        }//jcenter
+        maven {
+            url 'https://maven.aliyun.com/repository/gradle-plugin'
+            allowInsecureProtocol(true)
+        }//gradle-plugin
+        maven {
+            url 'https://maven.aliyun.com/repository/central'
+            allowInsecureProtocol(true)
+        }//central
+        maven {
+            url 'https://maven.aliyun.com/repository/google'
+            allowInsecureProtocol(true)
+        }//google
+        maven { url 'https://jitpack.io' }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url 'https://maven.aliyun.com/repository/public'
+            //Gradle7.0 以前版本不用设置
+            allowInsecureProtocol(true)
+        }//jcenter
+        maven {
+            url 'https://maven.aliyun.com/repository/gradle-plugin'
+            allowInsecureProtocol(true)
+        }//gradle-plugin
+        maven {
+            url 'https://maven.aliyun.com/repository/central'
+            allowInsecureProtocol(true)
+        }//central
+        maven {
+            url 'https://maven.aliyun.com/repository/google'
+            allowInsecureProtocol(true)
+        }//google
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+rootProject.name = "Proove"
+include ':app'
+include ':lib-common'
+include ':lib-ble-bean'

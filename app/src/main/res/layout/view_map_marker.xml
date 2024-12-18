@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="46dp"
+    android:layout_height="54dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/iv_map_marker"
+        android:layout_width="46dp"
+        android:layout_height="54dp"
+        android:src="@drawable/bg_position_mark" />
+
+    <ImageView
+        android:id="@+id/iv_device_image"
+        android:layout_width="27dp"
+        android:layout_height="33dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        tools:src="@drawable/image_product_cozyclip" />
+
+</FrameLayout>

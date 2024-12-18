@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<gradient
+    android:startColor="@color/v_scan_line_s"
+    android:centerColor="@color/v_scan_line_c"
+    android:endColor="@color/v_scan_line_s"/>
+    <size android:height="1dp"/>
+</shape>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature android:name="android.hardware.bluetooth" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        tools:remove="android:maxSdkVersion" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        tools:remove="android:maxSdkVersion" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE"></action>
+        </intent>
+        <intent>
+            <action android:name="android.media.action.ACTION_VIDEO_CAPTURE"></action>
+        </intent>
+    </queries>
+
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/image_product_ear"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/image_product_ear"
+        android:supportsRtl="true"
+        android:theme="@style/Base.Theme.Proove"
+        tools:targetApi="31">
+
+        <meta-data android:name="ScopedStorage" android:value="true"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBUb9I0jkSPp2mbh5nygrIJGqHXeHo7M_Q" />
+
+        <activity
+            android:name=".ui.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.HomeActivity"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".ui.AboutTheBrandActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.AboutUsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.DeviceEarFindActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.DeviceEarInfoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.DeviceHighlanderFindActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.DeviceEqSettingActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.DeviceHighlanderBatteryStatusActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.DeviceHighlanderDetailInfoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.DeviceHighlanderInfoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.DeviceKeySettingActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.DeviceMoreSettingActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.DeviceOtaUpdateActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.PrivacyPolicyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.ScooterSettingsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.TravelHistoryActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.TravelHistoryDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.UserProtocolActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.WebActivity"
+            android:launchMode="singleTop" />
+    </application>
+
+</manifest>

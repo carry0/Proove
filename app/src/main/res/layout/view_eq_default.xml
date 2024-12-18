@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="true"
+    android:paddingTop="18dp">
+
+    <TextView
+        android:id="@+id/tv_db_high"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="12db"
+        android:textColor="@color/tv_color"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_db_zero"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="0db"
+        android:textColor="@color/tv_color"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_db_minus_ten"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_db_high" />
+
+    <TextView
+        android:id="@+id/tv_db_minus_ten"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="20db"
+        android:textColor="@color/tv_color"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ll_eq_1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_eq_1"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:clipChildren="true"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/ll_eq_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/tv_db_high"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SeekBar
+            android:id="@+id/sb_eq_1"
+            android:layout_width="192dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:clickable="false"
+            android:focusable="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:progress="50"
+            android:progressDrawable="@drawable/progress_eq_default"
+            android:rotation="-90"
+            android:splitTrack="false"
+            android:thumb="@drawable/thumb_eq" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_eq_2"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+        android:clipChildren="true"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/ll_eq_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ll_eq_1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SeekBar
+            android:id="@+id/sb_eq_2"
+            android:layout_width="192dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:clickable="false"
+            android:focusable="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:progress="50"
+            android:progressDrawable="@drawable/progress_eq_default"
+            android:rotation="-90"
+            android:splitTrack="false"
+            android:thumb="@drawable/thumb_eq" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_eq_3"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+
+        android:clipChildren="true"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/ll_eq_4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ll_eq_2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SeekBar
+            android:id="@+id/sb_eq_3"
+            android:layout_width="192dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:clickable="false"
+            android:focusable="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:progress="50"
+            android:progressDrawable="@drawable/progress_eq_default"
+            android:rotation="-90"
+            android:splitTrack="false"
+            android:thumb="@drawable/thumb_eq" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_eq_4"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+
+        android:clipChildren="true"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/ll_eq_5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ll_eq_3"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SeekBar
+            android:id="@+id/sb_eq_4"
+            android:layout_width="192dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:clickable="false"
+            android:focusable="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:progress="50"
+            android:progressDrawable="@drawable/progress_eq_default"
+            android:rotation="-90"
+            android:splitTrack="false"
+            android:thumb="@drawable/thumb_eq" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_eq_5"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+
+        android:clipChildren="true"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/ll_eq_6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ll_eq_4"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SeekBar
+            android:id="@+id/sb_eq_5"
+            android:layout_width="192dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:clickable="false"
+            android:focusable="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:progress="50"
+            android:progressDrawable="@drawable/progress_eq_default"
+            android:rotation="-90"
+            android:splitTrack="false"
+            android:thumb="@drawable/thumb_eq" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_eq_6"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+
+        android:clipChildren="true"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/ll_eq_7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ll_eq_5"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SeekBar
+            android:id="@+id/sb_eq_6"
+            android:layout_width="192dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:clickable="false"
+            android:focusable="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:progress="50"
+            android:progressDrawable="@drawable/progress_eq_default"
+            android:rotation="-90"
+            android:splitTrack="false"
+            android:thumb="@drawable/thumb_eq" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_eq_7"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+
+        android:clipChildren="true"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/ll_eq_8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ll_eq_6"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SeekBar
+            android:id="@+id/sb_eq_7"
+            android:layout_width="192dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:clickable="false"
+            android:focusable="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:progress="50"
+            android:progressDrawable="@drawable/progress_eq_default"
+            android:rotation="-90"
+            android:splitTrack="false"
+            android:thumb="@drawable/thumb_eq" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_eq_8"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+
+        android:clipChildren="true"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/ll_eq_9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ll_eq_7"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SeekBar
+            android:id="@+id/sb_eq_8"
+            android:layout_width="192dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:clickable="false"
+            android:focusable="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:progress="50"
+            android:progressDrawable="@drawable/progress_eq_default"
+            android:rotation="-90"
+            android:splitTrack="false"
+            android:thumb="@drawable/thumb_eq" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_eq_9"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+        android:clipChildren="true"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/ll_eq_10"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ll_eq_8"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SeekBar
+            android:id="@+id/sb_eq_9"
+            android:layout_width="192dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:clickable="false"
+            android:focusable="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:progress="50"
+            android:progressDrawable="@drawable/progress_eq_default"
+            android:rotation="-90"
+            android:splitTrack="false"
+            android:thumb="@drawable/thumb_eq" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_eq_10"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="16dp"
+        android:clipChildren="true"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ll_eq_9"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SeekBar
+            android:id="@+id/sb_eq_10"
+            android:layout_width="192dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:clickable="false"
+            android:focusable="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:progress="50"
+            android:progressDrawable="@drawable/progress_eq_default"
+            android:rotation="-90"
+            android:splitTrack="false"
+            android:thumb="@drawable/thumb_eq" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_eq_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="32"
+        android:textColor="@color/tv_color"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@id/ll_eq_1"
+        app:layout_constraintStart_toStartOf="@id/ll_eq_1"
+        app:layout_constraintTop_toBottomOf="@id/ll_eq_1" />
+
+    <TextView
+        android:id="@+id/tv_eq_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="62"
+        android:textColor="@color/tv_color"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@id/ll_eq_2"
+        app:layout_constraintStart_toStartOf="@id/ll_eq_2"
+        app:layout_constraintTop_toBottomOf="@id/ll_eq_2" />
+
+    <TextView
+        android:id="@+id/tv_eq_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="125"
+        android:textColor="@color/tv_color"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@id/ll_eq_3"
+        app:layout_constraintStart_toStartOf="@id/ll_eq_3"
+        app:layout_constraintTop_toBottomOf="@id/ll_eq_3" />
+
+    <TextView
+        android:id="@+id/tv_eq_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="250"
+        android:textColor="@color/tv_color"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@id/ll_eq_4"
+        app:layout_constraintStart_toStartOf="@id/ll_eq_4"
+        app:layout_constraintTop_toBottomOf="@id/ll_eq_4" />
+
+    <TextView
+        android:id="@+id/tv_eq_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="500"
+        android:textColor="@color/tv_color"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@id/ll_eq_5"
+        app:layout_constraintStart_toStartOf="@id/ll_eq_5"
+        app:layout_constraintTop_toBottomOf="@id/ll_eq_5" />
+
+    <TextView
+        android:id="@+id/tv_eq_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="1k"
+        android:textColor="@color/tv_color"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@id/ll_eq_6"
+        app:layout_constraintStart_toStartOf="@id/ll_eq_6"
+        app:layout_constraintTop_toBottomOf="@id/ll_eq_6" />
+
+    <TextView
+        android:id="@+id/tv_eq_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="2k"
+        android:textColor="@color/tv_color"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@id/ll_eq_7"
+        app:layout_constraintStart_toStartOf="@id/ll_eq_7"
+        app:layout_constraintTop_toBottomOf="@id/ll_eq_7" />
+
+    <TextView
+        android:id="@+id/tv_eq_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="4k"
+        android:textColor="@color/tv_color"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@id/ll_eq_8"
+        app:layout_constraintStart_toStartOf="@id/ll_eq_8"
+        app:layout_constraintTop_toBottomOf="@id/ll_eq_8" />
+
+    <TextView
+        android:id="@+id/tv_eq_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="8k"
+        android:textColor="@color/tv_color"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@id/ll_eq_9"
+        app:layout_constraintStart_toStartOf="@id/ll_eq_9"
+        app:layout_constraintTop_toBottomOf="@id/ll_eq_9" />
+
+
+    <TextView
+        android:id="@+id/tv_eq_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="16k"
+        android:textColor="@color/tv_color"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@id/ll_eq_10"
+        app:layout_constraintStart_toStartOf="@id/ll_eq_10"
+        app:layout_constraintTop_toBottomOf="@id/ll_eq_10" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

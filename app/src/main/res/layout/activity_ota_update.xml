@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_home_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/cl_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ota_update"
+            android:textColor="@color/tv_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+
+            style="@style/IcBack"
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_marginHorizontal="41dp"
+        android:id="@+id/imageView7"
+        android:layout_width="0dp"
+        android:layout_height="66.82dp"
+        android:layout_marginTop="102dp"
+        android:src="@drawable/ic_ota_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_title_bar" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:textColor="@color/tv_ota_version_color"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView7"
+        app:layout_constraintStart_toStartOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        tool:text="V1.0" />
+
+    <TextView
+        android:layout_marginTop="32dp"
+        android:id="@+id/tv_eq_custom"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_item_device_24dp_line_1dp"
+        android:gravity="center"
+        android:paddingStart="24dp"
+        android:paddingEnd="49dp"
+        android:textColor="@color/select_tv_eq_function"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView13"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        android:text="@string/discover_a_new_version" />
+
+    <ImageView
+        style="@style/IcArrows"
+        android:id="@+id/imageView5"
+        android:layout_width="8dp"
+        android:layout_height="10.57dp"
+        android:layout_marginEnd="16.72dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_eq_custom"
+        app:layout_constraintEnd_toEndOf="@+id/tv_eq_custom"
+        app:layout_constraintTop_toTopOf="@+id/tv_eq_custom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

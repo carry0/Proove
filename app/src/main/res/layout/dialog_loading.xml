@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/bg_item_device_24dp"
+        android:id="@+id/frameLayout"
+        android:layout_width="212dp"
+        android:layout_height="100dp"
+        android:padding="12dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_loading"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/ota_load_rotate" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading"
+            android:textStyle="bold"
+            android:textColor="@color/tv_color" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

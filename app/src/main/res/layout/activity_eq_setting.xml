@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.proove.smart.vm.DeviceEqSettingViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_home_color">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/eq_settings"
+                android:textColor="@color/tv_color"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_setting"
+                style="@style/IcBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:onClick="@{(v)->viewModel.finishActivity(v)}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_title_bar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout4"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_white_100dp"
+                    android:paddingHorizontal="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_installed"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="8dp"
+                        android:background="@drawable/selector_nav_bg"
+                        android:gravity="center"
+                        android:text="@string/installed"
+                        android:textColor="@color/select_tv_eq"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_adjust"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/tv_adjust"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="8dp"
+                        android:background="@drawable/selector_nav_bg"
+                        android:gravity="center"
+                        android:text="@string/adjust"
+                        android:textColor="@color/select_tv_eq"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_installed"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout5"
+                    android:layout_width="0dp"
+                    android:layout_height="153dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+                    <ImageView
+                        android:id="@+id/iv_ear_l"
+                        android:layout_width="60dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="32dp"
+                        android:src="@drawable/ic_device_l"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_ear_r"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_ear_r"
+                        android:layout_width="60dp"
+                        android:layout_height="0dp"
+                        android:layout_marginVertical="32dp"
+                        android:src="@drawable/ic_device_r"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/iv_ear_l"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_adjust"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_scan_list_tl_tr_24dp"
+                    android:paddingHorizontal="9.04dp"
+                    android:paddingBottom="20dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
+
+                    <TextView
+                        android:id="@+id/tv_eq_custom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="8dp"
+                        android:background="@drawable/selector_eq_function_bg"
+                        android:gravity="center"
+                        android:paddingStart="24dp"
+                        android:paddingEnd="53.57dp"
+                        android:text="Custom sound"
+                        android:textColor="@color/select_tv_eq_function"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        style="@style/IcCustomSelect"
+                        android:layout_width="8dp"
+                        android:layout_height="10.57dp"
+                        android:layout_marginEnd="19dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_eq_custom"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_eq_custom"
+                        app:layout_constraintTop_toTopOf="@+id/tv_eq_custom" />
+
+                    <ImageView
+                        android:id="@+id/iv_custom_change_name"
+                        style="@style/IcCustomNameChange"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginEnd="15.3dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_eq_custom"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_eq_custom" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="54.86dp"
+                        android:paddingHorizontal="16.52dp"
+                        android:paddingVertical="18.09dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_eq_custom">
+
+                        <include
+                            android:id="@+id/ic_eq_adjust"
+                            layout="@layout/view_eq_adjust" />
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_installed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_scan_list_tl_tr_24dp"
+                    android:paddingHorizontal="9.04dp"
+                    android:paddingBottom="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
+
+                    <TextView
+                        android:id="@+id/tv_eq_default"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="8dp"
+                        android:background="@drawable/selector_eq_function_bg"
+                        android:gravity="center"
+                        android:text="Default"
+                        android:textColor="@color/select_tv_eq_function"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_eq_popular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_eq_popular"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="8dp"
+                        android:background="@drawable/selector_eq_function_bg"
+                        android:gravity="center"
+                        android:text="Popular"
+                        android:textColor="@color/select_tv_eq_function"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_eq_dance"
+                        app:layout_constraintStart_toEndOf="@+id/tv_eq_default"
+                        app:layout_constraintTop_toTopOf="@+id/tv_eq_default" />
+
+                    <TextView
+                        android:id="@+id/tv_eq_dance"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/selector_eq_function_bg"
+                        android:gravity="center"
+                        android:text="Dance"
+                        android:textColor="@color/select_tv_eq_function"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_eq_popular"
+                        app:layout_constraintTop_toTopOf="@+id/tv_eq_popular" />
+
+
+                    <TextView
+                        android:id="@+id/tv_eq_classical"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="8dp"
+                        android:background="@drawable/selector_eq_function_bg"
+                        android:gravity="center"
+                        android:text="Classical"
+                        android:textColor="@color/select_tv_eq_function"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_eq_jazz"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_eq_default" />
+
+                    <TextView
+                        android:id="@+id/tv_eq_jazz"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="8dp"
+                        android:background="@drawable/selector_eq_function_bg"
+                        android:gravity="center"
+                        android:text="Jazz"
+                        android:textColor="@color/select_tv_eq_function"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_eq_slow"
+                        app:layout_constraintStart_toEndOf="@+id/tv_eq_classical"
+                        app:layout_constraintTop_toTopOf="@+id/tv_eq_classical" />
+
+                    <TextView
+                        android:id="@+id/tv_eq_slow"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/selector_eq_function_bg"
+                        android:gravity="center"
+                        android:text="Slow"
+                        android:textColor="@color/select_tv_eq_function"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_eq_jazz"
+                        app:layout_constraintTop_toTopOf="@+id/tv_eq_jazz" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11.3dp"
+                        android:layout_marginBottom="54.86dp"
+                        android:background="@drawable/bg_eq_27dp"
+                        android:paddingHorizontal="16.52dp"
+                        android:paddingVertical="18.09dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_eq_classical">
+
+                        <include
+                            android:id="@+id/ic_eq_default"
+                            layout="@layout/view_eq_default" />
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

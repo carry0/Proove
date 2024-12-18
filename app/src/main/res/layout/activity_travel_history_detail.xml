@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_home_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/details_of_the_trip"
+            android:textColor="@color/tv_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/IcBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/textView24"
+        android:layout_width="0dp"
+        android:layout_height="205dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_test_map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_title_bar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_item_device_24dp"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24">
+
+        <ImageView
+            android:id="@+id/iv_history_detail_nav_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_history_detail_nav_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_history_detail_nav_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/tv_color"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_history_detail_nav"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toEndOf="@+id/iv_history_detail_nav_1"
+            app:layout_constraintTop_toTopOf="@+id/iv_history_detail_nav_1"
+            tool:text="Pr. Peremohy 12" />
+
+        <TextView
+            android:id="@+id/tv_history_detail_nav"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/tv_home_title_color"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_history_detail_nav_1"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toEndOf="@+id/iv_history_detail_nav_1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_history_detail_nav_title"
+            tool:text="14 Feb. 11:15" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="5dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/ic_line"
+            app:layout_constraintEnd_toEndOf="@+id/iv_history_detail_nav_1"
+            app:layout_constraintStart_toStartOf="@+id/iv_history_detail_nav_1"
+            app:layout_constraintTop_toBottomOf="@+id/iv_history_detail_nav_1" />
+
+
+        <ImageView
+            android:id="@+id/iv_travel"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="6dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_history_nav"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+
+        <TextView
+            android:id="@+id/tv_travel_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/tv_color"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_travel"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toEndOf="@+id/iv_travel"
+            app:layout_constraintTop_toTopOf="@+id/iv_travel"
+            tool:text="Pr. Pobedy 12" />
+
+        <TextView
+            android:id="@+id/tv_travel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/tv_home_title_color"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_travel"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toEndOf="@+id/iv_travel"
+            app:layout_constraintTop_toBottomOf="@+id/tv_travel_title"
+            tool:text="14 Feb 11:15" />
+
+
+        <View
+            android:id="@+id/guideline"
+            android:layout_width="1dp"
+            android:layout_height="137dp"
+            android:background="@color/v_line_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/iv_history_detail_nav_2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_history_detail_nav_2"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_history_detail_nav_2_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/tv_color"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_history_detail_nav_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_history_detail_nav_2"
+            app:layout_constraintTop_toTopOf="@+id/iv_history_detail_nav_2"
+            tool:text="Pr. Peremohy 12" />
+
+        <TextView
+            android:id="@+id/tv_history_detail_nav_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/tv_home_title_color"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_history_detail_nav_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_history_detail_nav_2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_history_detail_nav_2_title"
+            tool:text="14 Feb. 11:15" />
+
+        <View
+            android:layout_width="137dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/v_line_color"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_history_detail_nav_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/iv_history_detail_nav_2" />
+
+        <ImageView
+            android:id="@+id/iv_history_detail_nav_3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_history_detail_nav_2"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/iv_travel" />
+
+
+        <TextView
+            android:id="@+id/tv_history_detail_nav_3_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/tv_color"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_history_detail_nav_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_history_detail_nav_3"
+            app:layout_constraintTop_toTopOf="@+id/iv_history_detail_nav_3"
+            tool:text="Pr. Peremohy 12" />
+
+        <TextView
+            android:id="@+id/tv_history_detail_nav_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/tv_home_title_color"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_history_detail_nav_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_history_detail_nav_3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_history_detail_nav_3_title"
+            tool:text="14 Feb. 11:15" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvAppVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/tv_home_title_color"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tool:text="App version: 1.1.1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
